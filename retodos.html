@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segundo RETO</title>
+    <link rel="stylesheet" href="./assets/css/stylesheet.css" />
+  </head>
+  <body>
+    <section class="contenedor-principal">
+      <div class="contenedor-imagenes">
+        <div class="contenedor-img">
+          <img src="./assets/img/stickeruno.jpg" alt="" />
+          <label for="">cant. stickers</label>
+          <input id="sticker-uno" type="number" />
+        </div>
+        <div class="contenedor-img">
+          <img src="./assets/img/stickerdos.jpg" alt="" />
+          <label for="">cant. stickers</label>
+          <input id="sticker-dos" type="number" />
+        </div>
+        <div class="contenedor-img">
+          <img src="./assets/img/stickertres.jpg" alt="" />
+          <label for="">cant. stickers</label>
+          <input id="sticker-tres" type="number" />
+        </div>
+      </div>
+      <p id="tex-result"></p>
+      <button
+        onclick="
+            var elemtUno = document.querySelector('#sticker-uno').value
+     var elemtDos = document.querySelector('#sticker-dos').value
+     var elemtTres = document.querySelector('#sticker-tres').value
+     var parrafo = document.querySelector('#tex-result')
+     resultado = Number(elemtUno) + Number(elemtDos) + Number(elemtTres)
+      
+        if(resultado < 1){
+            parrafo.innerHTML = ('No llevas nada')
+    }
+    else if(resultado <= 10){
+             parrafo.innerHTML = ('llevas ' + resultado)
+    }
+    else{
+        parrafo.innerHTML = ('llevas demasiados stickers')
+    }
+      "
+      >
+        Verificar
+      </button>
+    </section>
+    <script src="./assets/js/dos.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tercer RETO</title>
+    <link rel="stylesheet" href="./assets/css/stylesheet.css" />
+  </head>
+  <body>
+    <section class="contenedor-principal">
+      <div class="contenedor-segundario">
+        <select name="" id="select-uno">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <select name="" id="select-dos">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <select name="" id="select-tres">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+      </div>
+      <button
+        onclick="
+      var passuno= document.querySelector('#select-uno').value
+      var passdos= document.querySelector('#select-dos').value
+      var passtres= document.querySelector('#select-tres').value
+      var respuesta = document.querySelector('#parr-dos')
+      var password = Number(passuno + passdos + passtres)
+
+      if(password === 911){
+          respuesta.innerHTML = 'Password 1 Correcto'
+      }
+      else if(password === 711){
+        respuesta.innerHTML = 'Password 2 Correcto'
+      }else{
+        respuesta.innerHTML = 'Password Incorrecto'
+      }
+
+      "
+      >
+        Ingresar
+      </button>
+      <p id="parr-dos"></p>
+    </section>
+  </body>
+</html>
